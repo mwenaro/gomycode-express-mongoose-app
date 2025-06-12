@@ -1,0 +1,9 @@
+1. create project folder
+2. init npm package => npm init -y
+3. init as tsc project => tsc --init
+4. install packges => npm i express cors mongoose
+5. install dev dependances => npm -D @types/express @types/node nodemon ts-node typescript 
+6. create basic folder scructrure & files /src , src/server.ts 
+7. create .env file for secrets
+8. create a .gitignore file 
+9. init git rep => git init
