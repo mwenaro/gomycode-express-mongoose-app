@@ -3,6 +3,7 @@ import type { Response, Request } from "express";
 import { config } from "dotenv";
 import { dbConnect } from "./db/connect";
 import { productRouter } from "./routes/productRoute";
+import { userRouter } from "./routes/userRoute";
 config()
 
 //variables
@@ -20,6 +21,8 @@ dbConnect()
 
 //products
 app.use("/products", productRouter)
+// users
+app.use("/users", userRouter)
 //routes
 app.get("/", (req: Request, res: Response) => {
   res.json({ msg: "Hello from server app" });
