@@ -1,6 +1,7 @@
 import express, { Request, Response } from 'express'
 import dotenv from 'dotenv'
 import { dbConnect } from './db/dbConnect'
+import { userRouter } from './routes/userRoute'
 
 //load env vars
 dotenv.config()
@@ -21,7 +22,7 @@ app.get("/", (req:Request, res:Response)=>{
 })
 
 //users
-
+app.use("/users", userRouter)
 //students
 
 //books
